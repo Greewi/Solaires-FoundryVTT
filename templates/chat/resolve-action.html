@@ -13,5 +13,11 @@
     {{#if HasRoll}}
     <div class="resolve-action-dice-success">{{localize "SOLAIRES.Chat.SuccessCount"}} <span class="resolve-action-dice-success-value">{{SuccessCount}}</span></div>
     {{/if}}
+    {{#if autoFail}}
+    <div class="resolve-action-dice-success">{{localize "SOLAIRES.Chat.AutoFail"}}</div>
+    {{/if}}
+    {{#if autoSuccess}}
+    <div class="resolve-action-dice-success">{{localize "SOLAIRES.Chat.AutoSuccess"}}</div>
+    {{/if}}
     <div class="resolve-action-result {{ClassActionResult}}">{{{TextActionResult}}}</div>
 </div>

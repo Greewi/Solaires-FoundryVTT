@@ -34,6 +34,7 @@
     "SOLAIRES.Char.Date": "Date",
     "SOLAIRES.Char.Place": "Lieu",
     "SOLAIRES.Char.Details": "Détails",
+    "SOLAIRES.Char.TooltipPoints": "Clic gauche: +1 | Clic droit: -1",
 
     "SOLAIRES.Item.Value": "Valeur",
     "SOLAIRES.Item.Description": "Description",
@@ -61,7 +62,8 @@
     "SOLAIRES.Chat.SuccessCount" : "Nombre de succès :",
     "SOLAIRES.Chat.ResultSuccess": "L'action a réussie !",
     "SOLAIRES.Chat.ResultFailed" : "L'action a échouée.",
-
+    "SOLAIRES.Chat.AutoSuccess" : "Succès automatique",
+    "SOLAIRES.Chat.AutoFail" : "Echec automatique",
 
     "SOLAIRES.Difficulty.Simple": "Simple",
     "SOLAIRES.Difficulty.Tough": "Ardue",

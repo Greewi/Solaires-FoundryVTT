@@ -148,8 +148,9 @@ a:hover {
     height: 28px;
 }
 
-.tabs {
+.sheet nav.sheet-tabs{
     height: 40px;
+    border:none;
 }
 
 .sheet .tabs .item {
@@ -202,7 +203,7 @@ button label {
     color: var(--header2-text-color);
 }
 
-input, textarea, .sheet .chosen-container-multi .chosen-choices, #chat-form textarea, input[type="text"], input[type="password"], input[type="datetime-local"] {
+input, textarea, .sheet .chosen-container-multi .chosen-choices, #chat-form textarea, input[type="text"], input[type="password"], input[type="datetime-local"],input[type="number"] {
     color: var(--main-text-color);
     background: var(--input-bg-color);
     border: none;
@@ -253,7 +254,7 @@ select:focus {
     outline: none;
 }
 
-select, form select, #chat-controls div.roll-type-select select {
+select, form select, #chat-controls .roll-type-select {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: url(../images/ui/dropdown-arrow.png), linear-gradient(to right, #0a252b 0%, #061a1e 100%);
@@ -277,7 +278,7 @@ select optgroup, form select optgroup, #chat-controls div.roll-type-select selec
     background-color: var(--main-bg-color);
 }
 
-form .notes, form .hint {
+form .notes, form .hint,#permissions-config .hint {
     color: var(--main-text-color);
 }
 
@@ -728,6 +729,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 .dialog-sum input {
+    height: auto;
     border: none;
     background: transparent;
     width: 80px;

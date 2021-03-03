@@ -2,7 +2,7 @@
     "name": "solaires",
     "title": "Solaires",
     "description": "Solaires est un jeu de rôles de science-fiction qui met en scène les habitants du système solaire, les Solaires, à la fin du XXIe siècle.",
-    "version": "0.1.0.5",
+    "version": "1.0.0",
     "templateVersion": 2,
     "author": "Greewi, JDW",
     "esmodules": [
@@ -49,8 +49,16 @@
             "lang": "fr",
             "name": "Français",
             "path": "lang/fr.json"
+        },
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/fr.json"
         }
     ],
+    "dependencies":{
+        "name": "compendium-folders"
+    },
     "socket": true,
     "gridDistance": 2,
     "gridUnits": "m",
