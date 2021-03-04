@@ -17,24 +17,6 @@
     ],
     "packs": [
         {
-            "name": "equipments",
-            "label": "Equipements",
-            "system": "solaires",
-            "module": "solaires",
-            "path": "packs/equipements.db",
-            "entity": "Item",
-            "tag": "equipment"
-        },
-        {
-            "name": "states",
-            "label": "Etats",
-            "system": "solaires",
-            "module": "solaires",
-            "path": "packs/etats.db",
-            "entity": "Item",
-            "tag": "state"
-        },
-        {
             "name": "macrosgm",
             "label": "Actions MJ",
             "system": "solaires",
@@ -42,6 +24,15 @@
             "path": "packs/macrosgm.db",
             "entity": "Macro",
             "tag": "macrosgm"
+        },
+        {
+            "name": "encyclopedia",
+            "label": "Encyclopédie",
+            "system": "solaires",
+            "module": "solaires",
+            "path": "packs/encyclopedia.db",
+            "entity": "JournalEntry",
+            "tag": "lore"
         }
     ],
     "languages": [
