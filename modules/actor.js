@@ -22,12 +22,13 @@ export class SolairesActor extends Actor {
         data.status.charPoints.max = 3;
 
       const items = actorData.items;
-      data.traits = items.filter(item => item.type === "trait");
       data.careers = items.filter(item => item.type === "career");
+      data.traits = items.filter(item => item.type === "trait");
+      data.personalityTraits = items.filter(item => item.type === "personalityTrait");
       data.relations = items.filter(item => item.type === "relation");
       data.statuses = items.filter(item => item.type === "status");
       data.modifications = items.filter(item => item.type === "modification");
       data.equipments = items.filter(item => item.type === "equipment");
-      data.softwares = items.filter(item => item.type === "softwares");
+      data.softwares = items.filter(item => item.type === "software");
   }
 }

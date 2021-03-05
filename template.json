@@ -7,12 +7,21 @@
             "identity": {
                 "identity" : {
                     "roles": "",
+                    "administrativeName": "",
+                    "pronoun":"",
                     "concept":"",
                     "profession": "",
                     "spiritNature": "",
                     "usualSheath":"",
-                    "affiliation":"",
-                    "gender":""
+                    "affiliation":""
+                }
+            },
+            "description": {
+                "description": {
+                    "physicalDescription": "",
+                    "possessions":"",
+                    "avatar": "",
+                    "solNetTags":""
                 }
             },
             "behavior": {
@@ -24,23 +33,9 @@
                     "opinions":""
                 }
             },
-            "description": {
-                "description": {
-                    "body": "",
-                    "possessions":""
-                }
-            },
-            "avatar": {
-                "avatar": {
-                    "body": "",
-                    "possessions": ""
-                }
-            },
-            "birth": {
-                "birth": {
-                    "birthday":"",
-                    "place":"",
-                    "details":"",
+            "history": {
+                "history": {
+                    "birth":"",
                     "story":""
                 }
             },
@@ -67,13 +62,14 @@
     },
     "Item": {
         "types": [
-            "trait",
             "career",
-            "status",
+            "trait",
+            "personalityTrait",
             "relation",
             "modification",
             "equipment",
-            "software"
+            "software",
+            "status"
         ],
         "templates": {
             "basic": {
@@ -81,17 +77,17 @@
                 "description": ""
             }
         },
-        "trait": {
-            "templates": [
-                "basic"
-            ]
-        },
         "career": {
             "templates": [
                 "basic"
             ]
         },
-        "status": {
+        "trait": {
+            "templates": [
+                "basic"
+            ]
+        },
+        "personalityTrait": {
             "templates": [
                 "basic"
             ]
@@ -112,6 +108,11 @@
             ]
         },
         "software": {
+            "templates": [
+                "basic"
+            ]
+        },
+        "status": {
             "templates": [
                 "basic"
             ]

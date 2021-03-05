@@ -70,20 +70,15 @@ export class SolairesActorSheet extends ActorSheet {
       let item = duplicate(this.actor.getEmbeddedEntity("OwnedItem", li.data("itemId")));
       switch (ev.button) {
         case 0:
-          if (ev.ctrlKey)
-            item.data.value += 10;
-          else
             item.data.value++;
+            if(item.data.value>3)
+              item.data.value = 3;
 
           break;
         case 2:
-          if (ev.ctrlKey)
-            item.data.value -= 10;
-          else
             item.data.value--;
-
-          if (item.data.value < 0)
-            item.data.value = 0;
+            if (item.data.value < 0)
+              item.data.value = 0;
           break;
       }
       this.actor.updateEmbeddedEntity("OwnedItem", item);
