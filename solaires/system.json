@@ -2,7 +2,7 @@
     "name": "solaires",
     "title": "Solaires",
     "description": "Solaires est un jeu de rôles de science-fiction qui met en scène les habitants du système solaire, les Solaires, à la fin du XXIe siècle.",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "templateVersion": 2,
     "author": "Greewi, JDW",
     "esmodules": [
@@ -72,6 +72,8 @@
     "gridDistance": 2,
     "gridUnits": "m",
     "primaryTokenAttribute": "status.charPoints",
+    "minimumCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.7.9",
     "url": "https://github.com/Greewi/Solaires-FoundryVTT",
     "manifest": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/solaires/system.json",
     "download": "https://github.com/Greewi/Solaires-FoundryVTT/releases/download/v0.1.0/solaires.zip"
