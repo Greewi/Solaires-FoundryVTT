@@ -113,15 +113,12 @@ a:hover {
     overflow-y: hidden;
 }
 
-.sheet-header {
+.sheet header.sheet-header {
     height: auto;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: max-content 1fr;
     margin-bottom: 10px;
-    align-items: center;
 }
 
 form .sheet-header .header-fields {

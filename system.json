@@ -33,6 +33,24 @@
             "path": "packs/encyclopedia.db",
             "entity": "JournalEntry",
             "tag": "lore"
+        },
+        {
+            "name": "characters",
+            "label": "Personnages",
+            "system": "solaires",
+            "module": "solaires",
+            "path": "packs/characters.db",
+            "entity": "Actor",
+            "tag": "charcacters"
+        },
+        {
+            "name": "scenes",
+            "label": "Scènes",
+            "system": "solaires",
+            "module": "solaires",
+            "path": "packs/scenes.db",
+            "entity": "Scene",
+            "tag": "scenes"
         }
     ],
     "languages": [
