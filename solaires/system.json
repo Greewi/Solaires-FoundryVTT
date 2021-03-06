@@ -73,6 +73,6 @@
     "gridUnits": "m",
     "primaryTokenAttribute": "status.charPoints",
     "url": "https://github.com/Greewi/Solaires-FoundryVTT",
-    "manifest": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/system.json",
-    "download": "https://github.com/Greewi/Solaires-FoundryVTT/archive/0.1.0.zip"
+    "manifest": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/solaires/system.json",
+    "download": "https://github.com/Greewi/Solaires-FoundryVTT/releases/download/v0.1.0/solaires.zip"
 }
