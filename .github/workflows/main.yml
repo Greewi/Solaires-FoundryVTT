@@ -15,7 +15,7 @@ jobs:
       id: sub_manifest_link_version
       uses: microsoft/variable-substitution@v1
       with:
-        files: 'module.json'
+        files: 'solaires/system.json'
       env:
         version: ${{github.event.release.tag_name}}
         url: https://github.com/${{github.repository}}
@@ -35,6 +35,6 @@ jobs:
         draft: false
         prerelease: false
         token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './system.json, ./solaires.zip'
+        artifacts: './solaires/system.json, ./solaires.zip'
         tag: ${{ github.event.release.tag_name }}
         body: ${{ github.event.release.body }}
