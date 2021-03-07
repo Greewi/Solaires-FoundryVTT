@@ -5,6 +5,7 @@
     --input-bg-color: #41414126;
     --main-text-color: #e2f4fc;
     --header2-text-color: #3cc1fd;
+    --aside-color: #196591;
     --tabs-color: #8bdbff;
     --tabs-active-color: #e3f6ff;
     --header-text-color: #858585;
@@ -101,6 +102,13 @@ a[href] {
 
 a:hover {
     text-shadow: 0 0 8px var(--text-green-color);
+}
+
+aside {
+    border : solid 3px var(--aside-color);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 5px 0;
 }
 
 .window-app .window-header .window-title {
@@ -309,6 +317,11 @@ input[type=range]::-moz-range-thumb {
 
 .sheet li {
     list-style: none;
+}
+
+.journal-sheet.sheet li {
+    list-style: disc;
+    margin-left: 15px;
 }
 
 .sheet .sheet-header li {
