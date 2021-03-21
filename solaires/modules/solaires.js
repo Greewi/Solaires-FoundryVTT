@@ -126,15 +126,15 @@ Hooks.on('hotbarDrop', async (bar, data, slot) => {
 	const elementsTypes = {
 		'Actor' : {
 			'collection' : 'actors',
-			'defaultImg' : "systems/solaires/images/icons/icon_software.png"
+			'defaultImg' : "systems/solaires/images/icons/icon_actor.png"
 		},
 		'Item' : {
 			'collection' : 'items',
-			'defaultImg' : "systems/solaires/images/icons/icon_software.png"
+			'defaultImg' : "systems/solaires/images/icons/icon_item.png"
 		},
 		'JournalEntry' : {
 			'collection' : 'journal',
-			'defaultImg' : "systems/solaires/images/icons/icon_software.png"
+			'defaultImg' : "systems/solaires/images/icons/icon_journal.png"
 		}
 	};
 
