@@ -118,6 +118,61 @@ Hooks.on('renderChatLog', (log, html, data) => {
     });
 });
 
+/**
+ * Drag and drop of characters, items and journals entry on the hot bar
+ */
+Hooks.on('hotbarDrop', async (bar, data, slot) => {
+
+	const elementsTypes = {
+		'Actor' : {
+			'collection' : 'actors',
+			'defaultImg' : "systems/solaires/images/icons/icon_software.png"
+		},
+		'Item' : {
+			'collection' : 'items',
+			'defaultImg' : "systems/solaires/images/icons/icon_software.png"
+		},
+		'JournalEntry' : {
+			'collection' : 'journal',
+			'defaultImg' : "systems/solaires/images/icons/icon_software.png"
+		}
+	};
+
+	if(!elementsTypes[data.type])
+		return;
+
+	const collection = elementsTypes[data.type].collection;
+	const defaultImg = elementsTypes[data.type].defaultImg;
+
+	const command = `
+		(function () {
+			const element = game.${collection}.get('${data.id}');
+			if (element?.sheet.rendered) {
+				element.sheet.close();
+			} else {
+				element.sheet.render(true);
+			}
+		})();
+	`;
+	const element = game[collection].get(data.id);
+	const name = element.name;
+	const img = element.img ? element.img : defaultImg;
+
+	let macro = game.macros.entities.find(macro => macro.name === name && macro.command === command);
+
+	if (!macro) {
+		macro = await Macro.create({
+			name: name,
+			type: 'script',
+			img: img,
+			command: command
+		}, {renderSheet: false});
+	}
+
+	game.user.assignHotbarMacro(macro, slot);
+	return false;
+});
+
 /* -------------------------------------------- */
 /*  Solaires main class                         */
 /* -------------------------------------------- */
