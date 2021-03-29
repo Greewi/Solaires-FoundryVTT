@@ -12,7 +12,7 @@ export class SolairesActorSheet extends ActorSheet {
       template: "systems/solaires/templates/actor-sheet.html",
       width: 600,
       height: 650,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "psychologie" }],
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
       dragDrop: [{ dragSelector: ".item-list .item", dropSelector: null }]
     });
   }
@@ -35,6 +35,9 @@ export class SolairesActorSheet extends ActorSheet {
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
+
+    //Activate "Chosen" plugin for selectbox
+    $(".select-role").chosen({ max_selected_options: 3, width: "100%" });
 
     // Everything below here is only needed if the sheet is editable
     if (!this.options.editable) return;
@@ -106,9 +109,6 @@ export class SolairesActorSheet extends ActorSheet {
         })
       }
     });
-
-    //Activate "Chosen" plugin for selectbox
-    $(".select-role").chosen({ max_selected_options: 3, width: "100%" });
 
     // change charpoints value
     html.find('.header-charpoints-point').mousedown(ev => {

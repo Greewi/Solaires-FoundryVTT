@@ -315,6 +315,18 @@ input[type=range]::-moz-range-thumb {
     padding-left: 3px;
 }
 
+.sheet .chosen-disabled {
+    opacity: 1 !important;
+}
+
+.sheet .chosen-container-multi.chosen-disabled .chosen-choices li.search-choice:hover {
+    text-decoration: none;
+}
+
+.sheet .chosen-container-multi.chosen-disabled .chosen-choices li.search-choice:hover .search-choice-close {
+    display: none;
+}
+
 .sheet li {
     list-style: none;
 }
