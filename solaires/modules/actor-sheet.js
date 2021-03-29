@@ -113,27 +113,23 @@ export class SolairesActorSheet extends ActorSheet {
     // change charpoints value
     html.find('.header-charpoints-point').mousedown(ev => {
       let val = this.actor.data.data.status.charPoints.value;
+      let max = this.actor.data.data.status.charPoints.max;
       let target = "data.status.charPoints.value";
       if($(ev.currentTarget).hasClass("header-charpoints-max"))
       {
         val = this.actor.data.data.status.charPoints.max;
+        max = 10;
         target = "data.status.charPoints.max";
       }
 
       switch (ev.button) {
         case 0:
-          if (ev.ctrlKey)
-            val += 10;
-          else
             val++;
-
+            if (val > max)
+              val = max;
           break;
         case 2:
-          if (ev.ctrlKey)
-            val -= 10;
-          else
             val--;
-
           if (val < 0)
             val = 0;
           break;
