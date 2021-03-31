@@ -72,6 +72,11 @@ body {
     background: transparent;
 }
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #8bdbff #0e1416;
+}
+
 .window-app .window-header {
     background: url(../images/ui/box_header_bullet.png), url(../images/ui/cb_header_options.png) 100%;
     background-position: left, center;
