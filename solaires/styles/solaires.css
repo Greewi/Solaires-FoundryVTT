@@ -231,7 +231,7 @@ input[type="checkbox"]:checked {
     background: url(../images/ui/checkbox-checked.png) 100% no-repeat;
 }
 
-button, form button, .dialog .dialog-buttons button {
+button, form button, .dark button, .dialog .dialog-buttons button {
     width: 100%;
     margin: 0 1px;
     background-image: url(../images/ui/btn-left.png), url(../images/ui/btn-right.png), url(../images/ui/btn-bg.png);
