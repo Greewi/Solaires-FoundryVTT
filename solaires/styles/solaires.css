@@ -526,14 +526,6 @@ input[type=range]::-moz-range-thumb {
     width: -moz-available;
 }
 
- .editor, .sheet.item .editor-content {
-    height: 265px;
-}
-
-.sheet.item .sheet-body {
-    height: 100%;
-}
-
 .post-item img {
     max-width: 50px;
     max-height: 50px;
