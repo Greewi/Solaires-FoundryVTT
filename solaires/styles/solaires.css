@@ -511,6 +511,10 @@ input[type=range]::-moz-range-thumb {
     text-shadow: 0 0 3px var(--text-green-color);
 }
 
+.sheet.journal-sheet img {
+    height: auto;
+}
+
 /* ==================== ITEM ============== */
 
 .sheet.item .sheet-header .profile-img {
