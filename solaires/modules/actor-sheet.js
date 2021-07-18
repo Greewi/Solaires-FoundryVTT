@@ -64,7 +64,7 @@ export class SolairesActorSheet extends ActorSheet {
       let header = ev.currentTarget,
         data = duplicate(header.dataset);
 
-      data["img"] = "systems/solaires/images/blank.png";
+      data["img"] = `systems/solaires/images/icons/icon_${data.type}.png`;
       data["name"] = `${game.i18n.localize("SOLAIRES.Item.New")} ${data.type.capitalize()}`;
       return Item.create(data, {parent: this.actor, renderSheet:true});
     });
