@@ -8,11 +8,11 @@
     "author": "Greewi, JDW",
     "authors" : [
         {
-            "Name" : "Sylvain « Greewi » Dumazet",
+            "name" : "Sylvain « Greewi » Dumazet",
             "url" : "https://feerie.net"
         },
         {
-            "Name" : "JDW"
+            "name" : "JDW"
         }
     ],
     "media" : [
@@ -105,8 +105,8 @@
     "gridDistance": 2,
     "gridUnits": "m",
     "primaryTokenAttribute": "status.charPoints",
-    "minimumCoreVersion": "0.7.9",
-    "compatibleCoreVersion": "0.7.9",
+    "minimumCoreVersion": "0.8.0",
+    "compatibleCoreVersion": "0.8.8",
     "url": "https://github.com/Greewi/Solaires-FoundryVTT",
     "manifest": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/solaires/system.json",
     "download": "https://github.com/Greewi/Solaires-FoundryVTT/releases/download/v0.1.0/solaires.zip"

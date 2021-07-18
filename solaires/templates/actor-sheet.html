@@ -160,11 +160,11 @@
                     </a>
                 </h2>
                 <ol class="item-list">
-                    {{#each actor.data.careers as |career id|}}
+                    {{#each data.careers as |career id|}}
                     <li class="item flexrow" data-item-id="{{career._id}}">
                         <img src="{{career.img}}" title="{{career.name}}" width="24" height="24" />
                         <span class="career-name item-name" title="{{career.name}}">{{career.name}}</span>
-                        <span class="career-value item-value">{{career.data.value}}</span>
+                        <span class="career-value item-value">{{career.data.data.value}}</span>
                         <div class="item-controls">
                             <a class="item-control item-post" title="{{localize "SOLAIRES.Item.PostChat"}}"><i class="fas fa-comment"></i></a>
                             <a class="item-control item-edit" title="{{localize "SOLAIRES.Item.Edit"}}"><i class="fas fa-edit"></i></a>
@@ -180,11 +180,11 @@
                     </a>
                 </h2>
                 <ol class="item-list">
-                    {{#each actor.data.traits as |trait id|}}
+                    {{#each data.traits as |trait id|}}
                     <li class="item flexrow" data-item-id="{{trait._id}}">
                         <img src="{{trait.img}}" title="{{trait.name}}" width="24" height="24" />
                         <span class="trait-name item-name" title="{{trait.name}}">{{trait.name}}</span>
-                        <span class="trait-value item-value">{{trait.data.value}}</span>
+                        <span class="trait-value item-value">{{trait.data.data.value}}</span>
                         <div class="item-controls">
                             <a class="item-control item-post" title="{{localize "SOLAIRES.Item.PostChat"}}"><i class="fas fa-comment"></i></a>
                             <a class="item-control item-edit" title="{{localize "SOLAIRES.Item.Edit"}}"><i class="fas fa-edit"></i></a>
@@ -200,11 +200,11 @@
                     </a>
                 </h2>
                 <ol class="item-list">
-                    {{#each actor.data.personalityTraits as |trait id|}}
+                    {{#each data.personalityTraits as |trait id|}}
                     <li class="item flexrow" data-item-id="{{trait._id}}">
                         <img src="{{trait.img}}" title="{{trait.name}}" width="24" height="24" />
                         <span class="trait-name item-name" title="{{trait.name}}">{{trait.name}}</span>
-                        <span class="trait-value item-value">{{trait.data.value}}</span>
+                        <span class="trait-value item-value">{{trait.data.data.value}}</span>
                         <div class="item-controls">
                             <a class="item-control item-post" title="{{localize "SOLAIRES.Item.PostChat"}}"><i class="fas fa-comment"></i></a>
                             <a class="item-control item-edit" title="{{localize "SOLAIRES.Item.Edit"}}"><i class="fas fa-edit"></i></a>
@@ -220,11 +220,11 @@
                     </a>
                 </h2>
                 <ol class="item-list">
-                    {{#each actor.data.relations as |relation id|}}
+                    {{#each data.relations as |relation id|}}
                     <li class="item flexrow" data-item-id="{{relation._id}}">
                         <img src="{{relation.img}}" title="{{relation.name}}" width="24" height="24" />
                         <span class="relation-name item-name" title="{{relation.name}}">{{relation.name}}</span>
-                        <span class="relation-value item-value">{{relation.data.value}}</span>
+                        <span class="relation-value item-value">{{relation.data.data.value}}</span>
                         <div class="item-controls">
                             <a class="item-control item-post" title="{{localize "SOLAIRES.Item.PostChat"}}"><i class="fas fa-comment"></i></a>
                             <a class="item-control item-edit" title="{{localize "SOLAIRES.Item.Edit"}}"><i class="fas fa-edit"></i></a>
@@ -243,11 +243,11 @@
                     </a>
                 </h2>
                 <ol class="item-list">
-                    {{#each actor.data.modifications as |modification id|}}
+                    {{#each data.modifications as |modification id|}}
                     <li class="item flexrow" data-item-id="{{modification._id}}">
                         <img src="{{modification.img}}" title="{{modification.name}}" width="24" height="24" />
                         <span class="modification-name item-name" title="{{modification.name}}">{{modification.name}}</span>
-                        <span class="modification-value item-value">{{modification.data.value}}</span>
+                        <span class="modification-value item-value">{{modification.data.data.value}}</span>
                         <div class="item-controls">
                             <a class="item-control item-post" title="{{localize "SOLAIRES.Item.PostChat"}}"><i class="fas fa-comment"></i></a>
                             <a class="item-control item-edit" title="{{localize "SOLAIRES.Item.Edit"}}"><i class="fas fa-edit"></i></a>
@@ -263,11 +263,11 @@
                     </a>
                 </h2>
                 <ol class="item-list">
-                    {{#each actor.data.equipments as |equipment id|}}
+                    {{#each data.equipments as |equipment id|}}
                     <li class="item flexrow" data-item-id="{{equipment._id}}">
                         <img src="{{equipment.img}}" title="{{equipment.name}}" width="24" height="24" />
                         <span class="equipment-name item-name" title="{{equipment.name}}">{{equipment.name}}</span>
-                        <span class="equipment-value item-value">{{equipment.data.value}}</span>
+                        <span class="equipment-value item-value">{{equipment.data.data.value}}</span>
                         <div class="item-controls">
                             <a class="item-control item-post" title="{{localize "SOLAIRES.Item.PostChat"}}"><i class="fas fa-comment"></i></a>
                             <a class="item-control item-edit" title="{{localize "SOLAIRES.Item.Edit"}}"><i class="fas fa-edit"></i></a>
@@ -283,11 +283,11 @@
                     </a>
                 </h2>
                 <ol class="item-list">
-                    {{#each actor.data.softwares as |softwares id|}}
+                    {{#each data.softwares as |softwares id|}}
                     <li class="item flexrow" data-item-id="{{softwares._id}}">
                         <img src="{{softwares.img}}" title="{{softwares.name}}" width="24" height="24" />
                         <span class="softwares-name item-name" title="{{softwares.name}}">{{softwares.name}}</span>
-                        <span class="softwares-value item-value">{{softwares.data.value}}</span>
+                        <span class="softwares-value item-value">{{softwares.data.data.value}}</span>
                         <div class="item-controls">
                             <a class="item-control item-post" title="{{localize "SOLAIRES.Item.PostChat"}}"><i class="fas fa-comment"></i></a>
                             <a class="item-control item-edit" title="{{localize "SOLAIRES.Item.Edit"}}"><i class="fas fa-edit"></i></a>
@@ -303,11 +303,11 @@
                     </a>
                 </h2>
                 <ol class="item-list">
-                    {{#each actor.data.statuses as |status id|}}
+                    {{#each data.statuses as |status id|}}
                     <li class="item flexrow" data-item-id="{{status._id}}">
                         <img src="{{status.img}}" title="{{status.name}}" width="24" height="24" />
                         <span class="status-name item-name" title="{{status.name}}">{{status.name}}</span>
-                        <span class="status-value item-value">{{status.data.value}}</span>
+                        <span class="status-value item-value">{{status.data.data.value}}</span>
                         <div class="item-controls">
                             <a class="item-control item-post" title="{{localize "SOLAIRES.Item.PostChat"}}"><i class="fas fa-comment"></i></a>
                             <a class="item-control item-edit" title="{{localize "SOLAIRES.Item.Edit"}}"><i class="fas fa-edit"></i></a>
