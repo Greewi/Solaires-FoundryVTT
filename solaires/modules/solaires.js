@@ -116,6 +116,10 @@ Hooks.on('renderChatLog', (log, html, data) => {
 		let actionScore = parseInt($(ev.currentTarget).data("actionscore"), 10);
 		SolairesAction.resolveAction(actionScore);
 	});
+
+	html.on("click", ".action-skill", async ev => {
+		game.actors.get(game.user.character?.id)?.sheet.render(true);
+	});
 });
 
 /**
@@ -184,7 +188,7 @@ Hooks.on('hotbarDrop', async (bar, data, slot) => {
  */
 Hooks.on('renderJournalDirectory', async (journalDirectory, html, data) => {
 	const role = game.users.get(game.userId).role
-	if(role == USER_ROLES.ASSISTANT || role == USER_ROLES.GAMEMASTER)
+	if(role == CONST.USER_ROLES.ASSISTANT || role == CONST.USER_ROLES.GAMEMASTER)
 		return;
 
 	const journalElements = html.find('li.journal.flexrow');

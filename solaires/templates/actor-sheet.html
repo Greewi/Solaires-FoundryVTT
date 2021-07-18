@@ -40,8 +40,8 @@
                 </li>
                 <li>
                     <label for="data.identity.spiritNature">{{localize "SOLAIRES.Char.SpiritNature"}}</label>
-                    <input list="list_spiritNature{{actor._id}}" type="text" data-dtype="String" name="data.identity.spiritNature" value="{{data.identity.spiritNature}}" />
-                    <datalist id="list_spiritNature{{actor._id}}">
+                    <input list="list_spiritNature{{actor.id}}" type="text" data-dtype="String" name="data.identity.spiritNature" value="{{data.identity.spiritNature}}" />
+                    <datalist id="list_spiritNature{{actor.id}}">
                         {{#each SpiritNatureTypes as |spiritNatureType key|}}
                         <option>{{localize spiritNatureType}}</option>
                         {{/each}}
@@ -49,8 +49,8 @@
                 </li>
                 <li>
                     <label for="data.identity.usualSheath">{{localize "SOLAIRES.Char.UsualSheath"}}</label>
-                    <input list="list_sheath{{actor._id}}" type="text" data-dtype="String" name="data.identity.usualSheath" value="{{data.identity.usualSheath}}" />
-                    <datalist id="list_sheath{{actor._id}}">
+                    <input list="list_sheath{{actor.id}}" type="text" data-dtype="String" name="data.identity.usualSheath" value="{{data.identity.usualSheath}}" />
+                    <datalist id="list_sheath{{actor.id}}">
                         {{#each Sheaths as |sheath key|}}
                         <option>{{localize sheath}}</option>
                         {{/each}}
@@ -161,7 +161,7 @@
                 </h2>
                 <ol class="item-list">
                     {{#each data.careers as |career id|}}
-                    <li class="item flexrow" data-item-id="{{career._id}}">
+                    <li class="item flexrow" data-item-id="{{career.id}}">
                         <img src="{{career.img}}" title="{{career.name}}" width="24" height="24" />
                         <span class="career-name item-name" title="{{career.name}}">{{career.name}}</span>
                         <span class="career-value item-value">{{career.data.data.value}}</span>
@@ -181,7 +181,7 @@
                 </h2>
                 <ol class="item-list">
                     {{#each data.traits as |trait id|}}
-                    <li class="item flexrow" data-item-id="{{trait._id}}">
+                    <li class="item flexrow" data-item-id="{{trait.id}}">
                         <img src="{{trait.img}}" title="{{trait.name}}" width="24" height="24" />
                         <span class="trait-name item-name" title="{{trait.name}}">{{trait.name}}</span>
                         <span class="trait-value item-value">{{trait.data.data.value}}</span>
@@ -201,7 +201,7 @@
                 </h2>
                 <ol class="item-list">
                     {{#each data.personalityTraits as |trait id|}}
-                    <li class="item flexrow" data-item-id="{{trait._id}}">
+                    <li class="item flexrow" data-item-id="{{trait.id}}">
                         <img src="{{trait.img}}" title="{{trait.name}}" width="24" height="24" />
                         <span class="trait-name item-name" title="{{trait.name}}">{{trait.name}}</span>
                         <span class="trait-value item-value">{{trait.data.data.value}}</span>
@@ -221,7 +221,7 @@
                 </h2>
                 <ol class="item-list">
                     {{#each data.relations as |relation id|}}
-                    <li class="item flexrow" data-item-id="{{relation._id}}">
+                    <li class="item flexrow" data-item-id="{{relation.id}}">
                         <img src="{{relation.img}}" title="{{relation.name}}" width="24" height="24" />
                         <span class="relation-name item-name" title="{{relation.name}}">{{relation.name}}</span>
                         <span class="relation-value item-value">{{relation.data.data.value}}</span>
@@ -244,7 +244,7 @@
                 </h2>
                 <ol class="item-list">
                     {{#each data.modifications as |modification id|}}
-                    <li class="item flexrow" data-item-id="{{modification._id}}">
+                    <li class="item flexrow" data-item-id="{{modification.id}}">
                         <img src="{{modification.img}}" title="{{modification.name}}" width="24" height="24" />
                         <span class="modification-name item-name" title="{{modification.name}}">{{modification.name}}</span>
                         <span class="modification-value item-value">{{modification.data.data.value}}</span>
@@ -264,7 +264,7 @@
                 </h2>
                 <ol class="item-list">
                     {{#each data.equipments as |equipment id|}}
-                    <li class="item flexrow" data-item-id="{{equipment._id}}">
+                    <li class="item flexrow" data-item-id="{{equipment.id}}">
                         <img src="{{equipment.img}}" title="{{equipment.name}}" width="24" height="24" />
                         <span class="equipment-name item-name" title="{{equipment.name}}">{{equipment.name}}</span>
                         <span class="equipment-value item-value">{{equipment.data.data.value}}</span>
@@ -284,7 +284,7 @@
                 </h2>
                 <ol class="item-list">
                     {{#each data.softwares as |softwares id|}}
-                    <li class="item flexrow" data-item-id="{{softwares._id}}">
+                    <li class="item flexrow" data-item-id="{{softwares.id}}">
                         <img src="{{softwares.img}}" title="{{softwares.name}}" width="24" height="24" />
                         <span class="softwares-name item-name" title="{{softwares.name}}">{{softwares.name}}</span>
                         <span class="softwares-value item-value">{{softwares.data.data.value}}</span>
@@ -304,7 +304,7 @@
                 </h2>
                 <ol class="item-list">
                     {{#each data.statuses as |status id|}}
-                    <li class="item flexrow" data-item-id="{{status._id}}">
+                    <li class="item flexrow" data-item-id="{{status.id}}">
                         <img src="{{status.img}}" title="{{status.name}}" width="24" height="24" />
                         <span class="status-name item-name" title="{{status.name}}">{{status.name}}</span>
                         <span class="status-value item-value">{{status.data.data.value}}</span>
