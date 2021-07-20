@@ -46,16 +46,18 @@ export class SolairesActorSheet extends ActorSheet {
 
     // Update Inventory Item
     html.find('.item-edit').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
+      const li = ev.currentTarget.tagName=="LI" ? $(ev.currentTarget) : $(ev.currentTarget).parents(".item");
       const item = this.actor.items.get(li.data("itemId"));
       item.sheet.render(true);
+      ev.stopPropagation();
     });
 
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteEmbeddedDocuments("Item",li.data("itemId"));
+      this.actor.deleteEmbeddedDocuments("Item",[li.data("itemId")]);
       li.slideUp(200, () => this.render(false));
+      ev.stopPropagation();
     });
 
     // Create Inventory Item
@@ -66,6 +68,7 @@ export class SolairesActorSheet extends ActorSheet {
 
       data["img"] = `systems/solaires/images/icons/icon_${data.type}.png`;
       data["name"] = `${game.i18n.localize("SOLAIRES.Item.New")} ${data.type.capitalize()}`;
+      ev.stopPropagation();
       return Item.create(data, {parent: this.actor, renderSheet:true});
     });
 
@@ -87,6 +90,7 @@ export class SolairesActorSheet extends ActorSheet {
           break;
       }
       item.update(item.data);
+      ev.stopPropagation();
     });
 
     // Delete Inventory Item
@@ -94,6 +98,7 @@ export class SolairesActorSheet extends ActorSheet {
       let itemId = $(ev.currentTarget).parents(".item").data("itemId");
       const item = this.actor.items.find(i => i.data._id == itemId);
       item.postItem();
+      ev.stopPropagation();
     });
 
     html.find('.item-name').click(ev => {
@@ -110,6 +115,7 @@ export class SolairesActorSheet extends ActorSheet {
           }
         })
       }
+      ev.stopPropagation();
     });
 
     // change charpoints value

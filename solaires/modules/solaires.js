@@ -57,6 +57,12 @@ Hooks.once("ready", async function () {
 		return select.innerHTML;
 	});
 
+	Handlebars.registerHelper('select', function(value, options) {
+		let html = options.fn(this);
+		html = html.replace(new RegExp(' value=\"' + value + '\"'), '$& selected="selected"');
+		return html;
+	});
+
 	CONFIG.TinyMCE.content_css[0] = "./systems/solaires/styles/mce.css";
 
 	game.solaires = new Solaires();

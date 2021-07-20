@@ -1,0 +1,60 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{data.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <h1 class="charname">{{item.name}}</h1>
+        </div>
+    </header>
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        <div class="tab active" data-group="primary" data-tab="description">
+            <h2>{{localize "SOLAIRES.Plot.Reward"}}</h2>
+            <ul>
+                <li>
+                    <label for="data.rewardName">{{localize "SOLAIRES.Plot.RewardElement"}}</label>
+                    <input type="text" data-dtype="String" name="data.rewardName" value="{{data.data.rewardName}}" />
+                </li>
+                <li>
+                    <label for="data.rewardCategory">{{localize "SOLAIRES.Plot.RewardCategory"}}</label>
+                    <p><select data-dtype="String" name="data.rewardCategory">
+                        {{#select data.data.rewardCategory}}
+                        <option value="career">{{localize "SOLAIRES.Char.Careers"}}</option>
+                        <option value="modification">{{localize "SOLAIRES.Char.Modifications"}}</option>
+                        <option value="equipment">{{localize "SOLAIRES.Char.Equipments"}}</option>
+                        <option value="software">{{localize "SOLAIRES.Char.Softwares"}}</option>
+                        <option value="relation">{{localize "SOLAIRES.Char.Relations"}}</option>
+                        <option value="trait">{{localize "SOLAIRES.Char.Traits"}}</option>
+                        <option value="personalityTrait">{{localize "SOLAIRES.Char.PersonalityTraits"}}</option>
+                        {{/select}}
+                    </select></p>
+                </li>
+                <li>
+                    <label for="data.rewardValue">{{localize "SOLAIRES.Plot.RewardValue"}}</label>
+                    <input type="text" data-dtype="Number" name="data.rewardValue" value="{{data.data.rewardValue}}" />
+                </li>
+            </ul>
+            <h2>{{localize "SOLAIRES.Plot.Goal"}}</h2>
+            <ul>
+                <li>
+                    <label for="name">{{localize "SOLAIRES.Plot.Goal"}}</label>
+                    <input type="text" data-dtype="String" name="name" value="{{item.name}}" />
+                </li>
+            </ul>
+
+            <h2>{{localize "SOLAIRES.Plot.Steps"}}</h2>
+            <ul>
+                <li>
+                    <label for="data.stepNumber">{{localize "SOLAIRES.Plot.StepsNumber"}}</label>
+                    <input type="text" data-dtype="Number" name="data.stepNumber" value="{{data.data.stepNumber}}" />
+                </li>
+            </ul>
+            <ul class="item-list">
+                {{#each data.data.steps as |step id|}}
+                <li class="item flexrow" data-item-id="{{id}}">
+                    <input type="text" data-dtype="Number" name="data.step[{{id}}]" value="{{step}}" />
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+</form>

@@ -69,7 +69,8 @@
             "modification",
             "equipment",
             "software",
-            "status"
+            "status",
+            "plot"
         ],
         "templates": {
             "basic": {
@@ -116,6 +117,15 @@
             "templates": [
                 "basic"
             ]
+        },
+        "plot": {
+            "templates": [],
+            "rewardName": "",
+            "rewardCategory": "",
+            "rewardValue": 0,
+            "goal": "",
+            "stepNumber": 0,
+            "steps": []
         }
     }
 }

@@ -14,6 +14,14 @@ export class SolairesItemSheet extends ItemSheet {
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });
   }
+
+  /** @override */
+  get template() {
+    if(this.item.data.type == "plot")
+      return "systems/solaires/templates/plot-sheet.html"
+    return "systems/solaires/templates/item-sheet.html"
+  }
+
   /** @override */
   _createEditor(target, editorOptions, initialContent) {
     editorOptions.content_css = "systems/solaires/styles/mce.css";

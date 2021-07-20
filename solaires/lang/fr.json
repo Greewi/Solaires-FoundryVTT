@@ -4,6 +4,7 @@
     "SOLAIRES.Char.Tab.Elements" : "Éléments",
     "SOLAIRES.Char.Tab.Possessions": "Possessions",
     "SOLAIRES.Char.Tab.Chronicles": "Histoire",
+    "SOLAIRES.Char.Tab.Plots": "Intrigues",
     "SOLAIRES.Char.Name": "Nom admin",
     "SOLAIRES.Char.Roles": "Rôles",
     "SOLAIRES.Char.Concept": "Concept",
@@ -114,5 +115,13 @@
     "SOLAIRES.Sheath.UltraHybrid" : "Hyper-hybride",
     "SOLAIRES.Sheath.Ethered" : "Informorphe",
 
+    "SOLAIRES.Plot.ProgressionPlot" : "Intrigue de progression",
+    "SOLAIRES.Plot.Reward": "Récompense",
+    "SOLAIRES.Plot.RewardElement": "Élement",
+    "SOLAIRES.Plot.RewardCategory": "Catégorie",
+    "SOLAIRES.Plot.RewardValue": "Score",
+    "SOLAIRES.Plot.Goal": "Objectif",
+    "SOLAIRES.Plot.Steps": "Étapes",
+    "SOLAIRES.Plot.StepsNumber": "Nombre d'étapes requises",
     "eh":"y"
 }

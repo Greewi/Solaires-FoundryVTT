@@ -30,5 +30,6 @@ export class SolairesActor extends Actor {
       data.modifications = items.filter(item => item.type === "modification");
       data.equipments = items.filter(item => item.type === "equipment");
       data.softwares = items.filter(item => item.type === "software");
+      data.plots = items.filter(item => item.type === "plot");
   }
 }

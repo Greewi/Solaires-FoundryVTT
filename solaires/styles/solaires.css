@@ -455,7 +455,7 @@ input[type=range]::-moz-range-thumb {
     flex: 1;
 }
 
-.item-list {
+.item-list, .plot-list {
     list-style: none;
     margin: 7px 0;
     padding: 0;
@@ -480,6 +480,21 @@ input[type=range]::-moz-range-thumb {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.plot-list .plot {
+    margin: 3px;
+    display: grid;
+    grid-template-columns: 24px 1fr min-content;
+    column-gap: 3px;
+}
+
+.plot-list .plot-name {
+
+}
+
+.plot-list .plot-value {
+
 }
 
 .sheet.actor .item-list .item-value {
