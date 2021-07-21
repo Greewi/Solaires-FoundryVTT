@@ -48,10 +48,13 @@
                     <input type="text" data-dtype="Number" name="data.stepNumber" value="{{data.data.stepNumber}}" />
                 </li>
             </ul>
-            <ul class="item-list">
+            <ul class="plotstep-list">
                 {{#each data.data.steps as |step id|}}
-                <li class="item flexrow" data-item-id="{{id}}">
-                    <p>{{step}}</p>
+                <li class="plotstep flexrow">
+                    <span>{{step}}</span>
+                    <div class="item-controls">
+                        <a class="item-control plotstep-delete" title="{{localize "SOLAIRES.Item.Delete"}}" data-step-id="{{id}}"><i class="fas fa-trash"></i></a>
+                    </div>
                 </li>
                 {{/each}}
             </ul>

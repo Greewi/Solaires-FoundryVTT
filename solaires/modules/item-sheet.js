@@ -47,11 +47,15 @@ export class SolairesItemSheet extends ItemSheet {
     // Update Inventory Item
     if(this.item.data.type == "plot") {
       html.find('.plot-finish').click(ev => {
-        this.item.data.data.steps.push(this.item.data.data.currentStep);
-        this.item.data.data.currentStep = "";
-        this.item.update();
-        this.item.sheet.render();
         ev.stopPropagation();
+        let newSteps = this.item.data.data.steps.concat(this.item.data.data.currentStep);
+        this.item.update({"data.steps":newSteps, "data.currentStep":""});
+      });
+      html.find('.plotstep-delete').click(ev => {
+        let stepId = $(ev.currentTarget).data("stepId");
+        ev.stopPropagation();
+        this.item.data.data.steps.splice(stepId, 1);
+        this.item.update({"data.steps":this.item.data.data.steps});
       });
     }
     
