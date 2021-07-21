@@ -332,8 +332,11 @@
                     {{#each data.plots as |plot id|}}
                     <li class="plot item-edit" data-item-id="{{plot.id}}">
                         <img src="{{plot.img}}" title="{{plot.name}}" width="24" height="24" />
-                        <span class="plot-name" title="{{plot.name}}">{{plot.name}}</span>
+                        <span class="plot-name" title="{{plot.name}}">{{plot.name}} ({{plot.data.data.rewardName}} - {{plot.data.data.rewardValue}})</span>
                         <span class="plot-value">{{plot.data.data.stepNumber}}/{{plot.data.data.steps.length}}</span>
+                        <div class="item-controls">
+                            <a class="item-control plot-delete" title="{{localize "SOLAIRES.Item.Delete"}}"><i class="fas fa-trash"></i></a>
+                        </div>
                     </li>
                     {{/each}}
                 </ol>

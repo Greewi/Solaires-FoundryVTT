@@ -125,7 +125,8 @@
             "rewardValue": 0,
             "goal": "",
             "stepNumber": 0,
-            "steps": []
+            "steps": [],
+            "currentStep": ""
         }
     }
 }

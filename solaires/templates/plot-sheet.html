@@ -51,10 +51,21 @@
             <ul class="item-list">
                 {{#each data.data.steps as |step id|}}
                 <li class="item flexrow" data-item-id="{{id}}">
-                    <input type="text" data-dtype="Number" name="data.step[{{id}}]" value="{{step}}" />
+                    <p>{{step}}</p>
                 </li>
                 {{/each}}
             </ul>
+            {{#if incomplet}}
+            <ul>
+                <li>
+                    <label for="data.currentStep">{{localize "SOLAIRES.Plot.CurrentStep"}}</label>
+                    <input type="text" data-dtype="String" name="data.currentStep" value="{{data.data.currentStep}}" />
+                </li>
+                <li>
+                    <input type="button" class="plot-finish" value="{{localize "SOLAIRES.Plot.FinishStep"}}" />
+                </li>
+            </ul>
+            {{/if}}
         </div>
     </section>
 </form>

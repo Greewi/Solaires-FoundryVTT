@@ -101,6 +101,14 @@ export class SolairesActorSheet extends ActorSheet {
       ev.stopPropagation();
     });
 
+    // Delete Plot
+    html.find('.plot-delete').click(ev => {
+      const li = $(ev.currentTarget).parents(".plot");
+      this.actor.deleteEmbeddedDocuments("Item",[li.data("itemId")]);
+      li.slideUp(200, () => this.render(false));
+      ev.stopPropagation();
+    });
+
     html.find('.item-name').click(ev => {
       let itemId = $(ev.currentTarget).parents(".item").data("itemId");
       let item = this.actor.items.find(i => i.data._id == itemId);

@@ -123,5 +123,7 @@
     "SOLAIRES.Plot.Goal": "Objectif",
     "SOLAIRES.Plot.Steps": "Étapes",
     "SOLAIRES.Plot.StepsNumber": "Nombre d'étapes requises",
+    "SOLAIRES.Plot.CurrentStep": "Étape actuelle",
+    "SOLAIRES.Plot.FinishStep": "Compléter cette étape",
     "eh":"y"
 }
