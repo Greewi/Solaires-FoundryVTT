@@ -487,27 +487,27 @@ input[type=range]::-moz-range-thumb {
     display: grid;
     grid-template-columns: 24px 1fr min-content min-content;
     column-gap: 3px;
+    cursor: pointer;
+    line-height: 24px;
+    padding: 3px 0;
+    border-bottom: 1px solid #bbbbbb1f;
 }
 
-.plot-list .plot-name {
-
-}
-
-.plot-list .plot-value {
-
+.plot-list .plot:hover {
+    background-color: rgba(255, 255, 255, 0.103);
 }
 
 .sheet.actor .item-list .item-value {
     flex: 0 0 20px;
 }
 
-.item-list .item-controls {
+.item-list .item-controls, .plot-list .item-controls, .plotstep-list .item-controls {
     flex: 0 0 49px;
     opacity: 0.2;
     font-size: smaller;
 }
 
-.item-list .item-controls a{
+.item-list .item-controls a, .plot-list .item-controls a, .plotstep-list .item-controls a {
     margin:0px 1px;
 }
 
@@ -562,6 +562,27 @@ input[type=range]::-moz-range-thumb {
 
 .post-item h2 span {
     margin: auto;
+}
+
+/* ========= Plot =====*/
+.plot-tab li {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    line-height: 24px;
+    column-gap: 10px;
+}
+
+.plot-tab li label{
+    text-align: right;
+}
+
+.plot-tab .plot-finish{
+    grid-column: 1/-1;
+    margin-top: 15px;
+}
+
+.plot-tab li.plotstep {
+    grid-template-columns: 120px 1fr min-content;
 }
 
 /* ========================= Chat ====================*/
@@ -992,3 +1013,62 @@ input[type=range]::-moz-range-thumb {
 .sidebar-tab .directory-list .directory-item img {
     overflow:hidden;
 }
+
+/* ==================== Monk's Enhanced Journal compatibility ============== */
+#MonksEnhancedJournal .monks-enhanced-journal .tab-bar .journal-tab {
+    background: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
+    color:var(--tabs-color);
+}
+#MonksEnhancedJournal .monks-enhanced-journal .tab-bar .journal-tab.active {
+    color:var(--tabs-active-color);
+}
+#MonksEnhancedJournal .monks-enhanced-journal .mainbar .navigation {
+    background: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
+}
+#MonksEnhancedJournal .monks-enhanced-journal .mainbar .navigation .nav-button {
+    background: var(--input-bg-color);
+    border: 1px solid var(--border-color);
+    color:var(--header-text-color);
+}
+#MonksEnhancedJournal .monks-enhanced-journal .mainbar .navigation .nav-input,
+#MonksEnhancedJournal .monks-journal-sheet .directory .directory-header .header-search input {
+    color: var(--main-text-color);
+    background: var(--input-bg-color);
+    border: none;
+    resize: none;
+}
+#MonksEnhancedJournal .monks-enhanced-journal .mainbar .navigation .nav-input:focus,
+#MonksEnhancedJournal .monks-journal-sheet .directory .directory-header .header-search input:focus {
+    background: url(../images/ui/commodity_hover_effect.png) 100%;
+    background-position-x: initial;
+    outline: none;
+    box-shadow: unset;
+}
+#MonksEnhancedJournal .monks-enhanced-journal .sidebar {
+    background: var(--secondary-bg-color);
+}
+#MonksEnhancedJournal #journal-directory li.folder.collapsed > .folder-header:not(.customcolor), #MonksEnhancedJournal #journal-directory li.folder.collapsed > .folder-header .create-folder, #MonksEnhancedJournal #journal-directory li.folder.collapsed > .folder-header .create-entity {
+    color: var(--main-text-color);
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+/*
+--main-bg-color: #030808;
+--secondary-bg-color: #071e2b;
+--input-bg-color: #41414126;
+--main-text-color: #e2f4fc;
+--header2-text-color: #3cc1fd;
+--aside-color: #196591;
+--tabs-color: #8bdbff;
+--tabs-active-color: #e3f6ff;
+--header-text-color: #858585;
+--font-family: 'Titillium Web', sans-serif;
+--border-color: #383a3a;
+--text-green-color: #8bff93;
+--text-red-color: #ffb78b;
+--text-shadow: #6fc6ffab;
+*/

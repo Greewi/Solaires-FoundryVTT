@@ -7,7 +7,7 @@
     </header>
     {{!-- Sheet Body --}}
     <section class="sheet-body">
-        <div class="tab active" data-group="primary" data-tab="description">
+        <div class="tab active plot-tab" data-group="primary" data-tab="description">
             <h2>{{localize "SOLAIRES.Plot.Reward"}}</h2>
             <ul>
                 <li>
@@ -50,7 +50,8 @@
             </ul>
             <ul class="plotstep-list">
                 {{#each data.data.steps as |step id|}}
-                <li class="plotstep flexrow">
+                <li class="plotstep">
+                    <label>{{#unless id}}{{localize "SOLAIRES.Plot.FinishedSteps"}}{{/unless}}</label>
                     <span>{{step}}</span>
                     <div class="item-controls">
                         <a class="item-control plotstep-delete" title="{{localize "SOLAIRES.Item.Delete"}}" data-step-id="{{id}}"><i class="fas fa-trash"></i></a>
@@ -64,10 +65,8 @@
                     <label for="data.currentStep">{{localize "SOLAIRES.Plot.CurrentStep"}}</label>
                     <input type="text" data-dtype="String" name="data.currentStep" value="{{data.data.currentStep}}" />
                 </li>
-                <li>
-                    <input type="button" class="plot-finish" value="{{localize "SOLAIRES.Plot.FinishStep"}}" />
-                </li>
             </ul>
+            <button class="plot-finish">{{localize "SOLAIRES.Plot.FinishStep"}}</button>
             {{/if}}
         </div>
     </section>
