@@ -78,18 +78,18 @@ export class SolairesActorSheet extends ActorSheet {
       let item = this.actor.items.get(li.data("itemId"));
       switch (ev.button) {
         case 0:
-            item.data.value++;
-            if(item.data.value>3)
-              item.data.value = 3;
+            item.data.data.value++;
+            if(item.data.data.value>3)
+              item.data.data.value = 3;
 
           break;
         case 2:
-            item.data.value--;
-            if (item.data.value < 0)
-              item.data.value = 0;
+            item.data.data.value--;
+            if (item.data.data.value < 0)
+              item.data.data.value = 0;
           break;
       }
-      item.update(item.data);
+      item.update({"data.value":item.data.data.value});
       ev.stopPropagation();
     });
 
