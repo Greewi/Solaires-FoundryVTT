@@ -169,12 +169,15 @@ Hooks.on('hotbarDrop', async (bar, data, slot) => {
 				element.sheet.render(true);
 			}
 		})();
-	`;
+	`.trim();
 	const element = game[collection].get(data.id);
 	const name = element.name;
 	const img = element.img ? element.img : defaultImg;
 
-	let macro = game.macros.entities.find(macro => macro.name === name && macro.data.command === command);
+	let macro = game.macros.find(macro => {
+		let found = macro.data.name === name && macro.data.command === command
+		return found;
+	});
 
 	if (!macro) {
 		macro = await Macro.create({
@@ -199,11 +202,28 @@ Hooks.on('renderJournalDirectory', async (journalDirectory, html, data) => {
 
 	const journalElements = html.find('li.journal.flexrow');
 	journalElements.each((index, element) => {
-		const journalId = element.dataset.entityId;
+		const journalId = element.dataset.documentId;
 		if(!journalId)
 			return;
 		element.draggable = true;
 		element.ondragstart = journalDirectory._onDragStart;
+	});
+});
+
+/**
+ * Work around to enable drag&drop of the actors for user that dont have the right to create tokens
+ */
+Hooks.on('renderActorDirectory', async (actorDirectory, html, data) => {
+	if(TokenDocument.canUserCreate(game.user))
+		return;
+
+	const actorElements = html.find('li.actor.flexrow');
+	actorElements.each((index, element) => {
+		const actorId = element.dataset.documentId;
+		if(!actorId)
+			return;
+		element.draggable = true;
+		element.ondragstart = actorDirectory._onDragStart;
 	});
 });
 

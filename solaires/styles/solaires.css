@@ -171,6 +171,7 @@ form .sheet-header .header-fields {
     margin: 0px 2px;
     color: var(--tabs-color);
     text-shadow: 0 0 2px #8bdbff;
+    flex: 1;
 }
 
 .sheet .tabs .item.active, .sheet .tabs .item:hover {

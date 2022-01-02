@@ -2,13 +2,11 @@
     "name": "solaires",
     "title": "Solaires",
     "description": "Solaires est un jeu de rôles de science-fiction qui met en scène les habitants du système solaire, les Solaires, à la fin du XXIe siècle.",
-    "version": "0.1.0",
-    "manifestPlusVersion": "1.1.0",
-    "templateVersion": 2,
     "author": "Greewi, JDW",
     "authors" : [
         {
             "name" : "Sylvain « Greewi » Dumazet",
+            "discord" : "Greewi#1099",
             "url" : "https://feerie.net"
         },
         {
@@ -18,19 +16,13 @@
             "ko-fi":"jdwfvtt"
         }
     ],
-    "media" : [
-        {
-            "type": "cover",
-            "url": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/media/cover.jpg"
-        },
-        {
-            "type": "icon",
-            "url": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/media/icon.png"
-        },
-        {
-            "type": "screenshot",
-            "url": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/media/screenshot01.jpg"
-        }
+    "url": "https://github.com/Greewi/Solaires-FoundryVTT",
+    "flags": {},
+    "version": "1.0.0",
+    "minimumCoreVersion": "0.8.0",
+    "compatibleCoreVersion": "9",
+    "scripts": [
+        "scripts/chosen/chosen.jquery.min.js"
     ],
     "esmodules": [
         "modules/solaires.js"
@@ -39,8 +31,17 @@
         "styles/solaires.css",
         "scripts/chosen/chosen.css"
     ],
-    "scripts": [
-        "scripts/chosen/chosen.jquery.min.js"
+    "languages": [
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "lang/fr.json"
+        },
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/fr.json"
+        }
     ],
     "packs": [
         {
@@ -89,28 +90,31 @@
             "tag": "elements"
         }
     ],
-    "languages": [
-        {
-            "lang": "fr",
-            "name": "Français",
-            "path": "lang/fr.json"
-        },
-        {
-            "lang": "en",
-            "name": "English",
-            "path": "lang/fr.json"
-        }
-    ],
-    "dependencies":{
+    "system": [],
+    "dependencies":[{
         "name": "compendium-folders"
-    },
+    }],
     "socket": true,
+    "manifest": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/solaires/system.json",
+    "download": "https://github.com/Greewi/Solaires-FoundryVTT/releases/download/v0.1.0/solaires.zip",
+    "protected": false,
     "gridDistance": 2,
     "gridUnits": "m",
     "primaryTokenAttribute": "status.charPoints",
-    "minimumCoreVersion": "0.8.0",
-    "compatibleCoreVersion": "0.8.8",
-    "url": "https://github.com/Greewi/Solaires-FoundryVTT",
-    "manifest": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/solaires/system.json",
-    "download": "https://github.com/Greewi/Solaires-FoundryVTT/releases/download/v0.1.0/solaires.zip"
+
+    "manifestPlusVersion": "1.2.0",
+    "media" : [
+        {
+            "type": "cover",
+            "url": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/media/cover.jpg"
+        },
+        {
+            "type": "icon",
+            "url": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/media/icon.png"
+        },
+        {
+            "type": "screenshot",
+            "url": "https://raw.githubusercontent.com/Greewi/Solaires-FoundryVTT/stable/media/screenshot01.jpg"
+        }
+    ]
 }
