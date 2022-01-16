@@ -100,6 +100,7 @@ Hooks.on("renderChatMessage", async (app, html, msg) => {
 
 Hooks.on('renderChatLog', (log, html, data) => {
 	html.on("click", '.skill-remove', async ev => {
+		ev.stopPropagation();
 		let itemSlot = $(ev.currentTarget).parents(".action-skill").hasClass("action-skill-1") ? 1 : 2;
 		if (game.user.isGM && game.solaires.pendingAction)
 			game.solaires.pendingAction.removeItem(itemSlot);
@@ -111,6 +112,7 @@ Hooks.on('renderChatLog', (log, html, data) => {
 				}
 			});
 		}
+
 	});
 
 
