@@ -119,7 +119,7 @@ export class SolairesActorSheet extends ActorSheet {
           type: "setItem",
           payload: {
             idItem: itemId,
-            idActor: this.actor._id
+            idActor: this.actor.id
           }
         })
       }
